@@ -90,28 +90,4 @@ describe("Post cart", function () {
         });
     });
   });
-
-  describe("GET /cart", function () {
-    it("should return the current state of the cart", function (done) {
-      chai
-        .request(app)
-        .get("/cart")
-        .end(function (err, res) {
-          expect(err).to.be.null;
-          expect(res).to.have.status(200);
-          expect(res.body).to.deep.equal({
-            items: [
-              {
-                price: "8.00",
-                productId: 7596624904422,
-                quantity: 2,
-                title: "Classic Sticker Pack",
-              },
-            ],
-            totalPrice: 16,
-          });
-          done();
-        });
-    });
-  });
 });

@@ -54,8 +54,4 @@ router.post("/", (req, res) => {
   res.send(cartData);
 });
 
-router.get("/", (req, res) => {
-  res.send(cartData);
-});
-
 module.exports = router;
